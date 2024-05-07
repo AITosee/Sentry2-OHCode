@@ -1,0 +1,295 @@
+{
+    "kind": "CATEGORY",
+    "name": "Sentry2",
+    "colour": "#EF5411",
+    "contents": [
+        {
+            "kind": "LABEL",
+            "text": "配置参数"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2Begin"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2VisionSetStatus"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2CameraSetAwb"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2SetParamNum",
+            "inputs": {
+                "max_num": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2SetColorParam",
+            "inputs": {
+                "x": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 120
+                        }
+                    }
+                },
+                "y": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 120
+                        }
+                    }
+                },
+                "w": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 20
+                        }
+                    }
+                },
+                "h": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 20
+                        }
+                    }
+                },
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2SetBlodParam",
+            "inputs": {
+                "w": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 15
+                        }
+                    }
+                },
+                "h": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 15
+                        }
+                    }
+                },
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2SetVisionParam",
+            "inputs": {
+                "x": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 0
+                        }
+                    }
+                },
+                "y": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 0
+                        }
+                    }
+                },
+                "w": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 0
+                        }
+                    }
+                },
+                "h": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 0
+                        }
+                    }
+                },
+                "lable": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 0
+                        }
+                    }
+                },
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "LABEL",
+            "text": "运行参数"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2Detected"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2GetValue",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2GetValueNomal",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2ColorRcgValue",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2QrRcgValue"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2GetQrCodeValue"
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2LineValue",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2DetectedColor",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2DetectedBlob",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2DetectedCard",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "BLOCK",
+            "type": "Sentry2Detected20Class",
+            "inputs": {
+                "objid": {
+                    "shadow": {
+                        "type": "math_number",
+                        "fields": {
+                            "NUM": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
