@@ -13,11 +13,11 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2VisionSetStatus"
+      "type": "Sentry2CameraSetAwb"
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2CameraSetAwb"
+      "type": "Sentry2VisionSetStatus"
     },
     {
       "kind": "BLOCK",
