@@ -21,7 +21,7 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2SetParamNum",
+      "type": "Sentry2VisionSetParamNum",
       "inputs": {
         "max_num": {
           "shadow": {
@@ -35,7 +35,7 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2SetColorParam",
+      "type": "Sentry2VisionColorSetParam",
       "inputs": {
         "x": {
           "shadow": {
@@ -69,7 +69,7 @@
             }
           }
         },
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -81,7 +81,7 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2SetBlodParam",
+      "type": "Sentry2VisionBlobSetParam",
       "inputs": {
         "w": {
           "shadow": {
@@ -99,7 +99,7 @@
             }
           }
         },
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -107,6 +107,9 @@
             }
           }
         }
+      },
+      "fields": {
+        "lable": "sentry_color_label_e.kColorRed"
       }
     },
     {
@@ -153,7 +156,7 @@
             }
           }
         },
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -161,6 +164,9 @@
             }
           }
         }
+      },
+      "fields": {
+        "vision_obj": "sentry2_vision_e.kVisionCustom"
       }
     },
     {
@@ -169,13 +175,13 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2Detected"
+      "type": "Sentry2VisionDetectedCount"
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2ColorRcgValue",
+      "type": "Sentry2VisionObjColor",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -189,7 +195,7 @@
       "kind": "BLOCK",
       "type": "Sentry2GetValue",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -201,9 +207,9 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2QrRcgValue",
+      "type": "Sentry2VisionObjLine",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -215,13 +221,9 @@
     },
     {
       "kind": "BLOCK",
-      "type": "Sentry2GetQrCodeValue"
-    },
-    {
-      "kind": "BLOCK",
-      "type": "Sentry2LineValue",
+      "type": "Sentry2VisionObjQr",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -230,12 +232,16 @@
           }
         }
       }
+    },
+    {
+      "kind": "BLOCK",
+      "type": "Sentry2GetQrValue"
     },
     {
       "kind": "BLOCK",
       "type": "Sentry2GetValueNomal",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -243,13 +249,16 @@
             }
           }
         }
+      },
+      "fields": {
+        "vision_obj": "sentry2_vision_e.kVisionCustom"
       }
     },
     {
       "kind": "BLOCK",
       "type": "Sentry2DetectedColor",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -263,7 +272,7 @@
       "kind": "BLOCK",
       "type": "Sentry2DetectedBlob",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -271,13 +280,16 @@
             }
           }
         }
+      },
+      "fields": {
+        "vision_card_obj": "sentry_color_label_e.kColorRed"
       }
     },
     {
       "kind": "BLOCK",
       "type": "Sentry2DetectedCard",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
@@ -291,7 +303,7 @@
       "kind": "BLOCK",
       "type": "Sentry2Detected20Class",
       "inputs": {
-        "objid": {
+        "index": {
           "shadow": {
             "type": "math_number",
             "fields": {
