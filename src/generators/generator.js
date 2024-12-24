@@ -16,7 +16,7 @@ export const Sentry2Begin = function (block) {
 export const Sentry2CameraSetAwb = function (block) {
     var awb = block.getFieldValue("awb_obj");
 
-    var code = "sentry" + ".CameraSetAwb(" + awb + ")\n";
+    var code = "sentry.CameraSetAwb(" + awb + ")\n";
 
     pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
 
@@ -27,7 +27,7 @@ export const Sentry2CameraSetAwb = function (block) {
 export const Sentry2VisionSetStatus = function (block) {
     var VisionStatus = block.getFieldValue("VisionStatus");
     var vision_obj = block.getFieldValue("vision_obj");
-    var code = "sentry2" + ".Vision" + VisionStatus + "(" + vision_obj + ")\n";
+    var code = "sentry2.Vision" + VisionStatus + "(" + vision_obj + ")\n";
 
     pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
 
@@ -42,8 +42,7 @@ export const Sentry2VisionSetParamNum = function (block) {
         "max_num",
         pythonGenerator.ORDER_NONE,
     );
-    var code =
-        "sentry2" + ".SetParamNum(" + vision_obj + ", " + max_num + ")\n";
+    var code = "sentry2.SetParamNum(" + vision_obj + ", " + max_num + ")\n";
 
     pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
 
@@ -170,7 +169,7 @@ export const Sentry2SetVisionParam = function (block) {
 export const Sentry2VisionDetectedCount = function (block) {
     var vision_obj = block.getFieldValue("vision_obj");
     var code =
-        "sentry2" + ".GetValue(" + vision_obj + ", sentry_obj_info_e.kStatus)";
+        "sentry2.GetValue(" + vision_obj + ", sentry_obj_info_e.kStatus)";
 
     pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
 
@@ -257,7 +256,17 @@ export const Sentry2VisionObjQr = function (block) {
 };
 
 export const Sentry2GetQrValue = function (block) {
-    var code = "sentry2" + ".GetQrCodeValue()";
+    var code = "sentry2.GetQrCodeValue()";
+
+    pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
+
+    return [code, pythonGenerator.ORDER_ATOMIC];
+};
+
+export const Sentry2GetValueNomal = function (block) {
+    var vision_obj = block.getFieldValue("vision_obj");
+    var vision_res_obj = block.getFieldValue("vision_res_obj");
+    var code = "sentry2.GetValue(" + vision_obj + ", " + vision_res_obj + ")";
 
     pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
 
@@ -274,8 +283,7 @@ export const Sentry2DetectedColor = function (block) {
         ) || "1";
 
     var code =
-        "(sentry2" +
-        ".GetValue(sentry2_vision_e.kVisionColor, sentry_obj_info_e.kLabel, " +
+        "(sentry2.GetValue(sentry2_vision_e.kVisionColor, sentry_obj_info_e.kLabel, " +
         index +
         ") == " +
         ColorLabel +
@@ -296,8 +304,7 @@ export const Sentry2DetectedBlob = function (block) {
         ) || "1";
 
     var code =
-        "(sentry2" +
-        ".GetValue(sentry2_vision_e.kVisionBlob, sentry_obj_info_e.kLabel, " +
+        "(sentry2.GetValue(sentry2_vision_e.kVisionBlob, sentry_obj_info_e.kLabel, " +
         index +
         ") == " +
         ColorLabel +
@@ -318,8 +325,7 @@ export const Sentry2DetectedCard = function (block) {
         ) || "1";
 
     var code =
-        "(sentry2" +
-        ".GetValue(sentry2_vision_e.kVisionCard, sentry_obj_info_e.kLabel, " +
+        "(sentry2.GetValue(sentry2_vision_e.kVisionCard, sentry_obj_info_e.kLabel, " +
         index +
         ") == " +
         card +
@@ -340,8 +346,7 @@ export const Sentry2Detected20Class = function (block) {
         ) || "1";
 
     var code =
-        "(sentry2" +
-        ".GetValue(sentry2_vision_e.kVision20Classes, sentry_obj_info_e.kLabel, " +
+        "(sentry2.GetValue(sentry2_vision_e.kVision20Classes, sentry_obj_info_e.kLabel, " +
         index +
         ") == " +
         card +
