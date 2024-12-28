@@ -2,15 +2,21 @@
 export const Sentry2Begin = function (block) {
     var mode = block.getFieldValue("mode_obj");
     var addr = block.getFieldValue("addr_obj");
-    var code = `sentry2.begin(${mode})\n`;
 
-    pythonGenerator.definitions_["import_iic"] = "from machine import I2C";
-    pythonGenerator.definitions_["import_Sentry"] = "from Sentry import *";
-    pythonGenerator.definitions_["init_IIC"] = "i2c0 = I2C(0,freq=400000)";
-    pythonGenerator.definitions_["init_Sentry2"] =
+    if (mode == "uart2") {
+        pythonGenerator.definitions_["import_UART"] =
+            "from machine import UART";
+        pythonGenerator.definitions_["init_UART"] =
+            `${mode} = UART(2, baudrate=115200)`;
+    } else {
+        pythonGenerator.definitions_["import_IIC"] = "from machine import I2C";
+        pythonGenerator.definitions_["init_IIC"] =
+            `${mode} = I2C(0,freq=400000)`;
+    }
+
+    pythonGenerator.definitions_["init_Sengo2"] =
         `sentry2  = Sentry(0x4, ${addr} )`;
-
-    return code;
+    var code = `sentry2.begin(${mode})\n`;
 };
 
 export const Sentry2CameraSetAwb = function (block) {
