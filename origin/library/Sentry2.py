@@ -56,7 +56,7 @@ class sentry2_card_label_e:
     kCardEight = 28
     kCardNine = 29
 
-class Sengo2(SentryBase):
-    SENGO2_DEVICE_ID = 0x07
+class Sentry2(SentryBase):
+    SENTRY2_DEVICE_ID = 0x04
     def __init__(self, address=0x60, log_level=LOG_ERROR):
-        super().__init__(self.SENGO2_DEVICE_ID,address,log_level, sengo2_vision_e.kVisionQrCode, sengo2_vision_e.kVisionMaxType)
+        super().__init__(self.SENTRY2_DEVICE_ID,address,log_level, sentry2_vision_e.kVisionQrCode, sentry2_vision_e.kVisionMaxType)
