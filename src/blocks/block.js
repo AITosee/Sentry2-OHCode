@@ -76,12 +76,12 @@ export const vision_line_objs = function () {
 
 export const sentry2_vision_blod_objs = function () {
     return [
-        [ZhHansMsg.SENTRY2_COLOR_BLACK, "sentry_color_label_e.kColorBlack"],
-        [ZhHansMsg.SENTRY2_COLOR_WHITE, "sentry_color_label_e.kColorWhite"],
-        [ZhHansMsg.SENTRY2_COLOR_RED, "sentry_color_label_e.kColorRed"],
-        [ZhHansMsg.SENTRY2_COLOR_GREEN, "sentry_color_label_e.kColorGreen"],
-        [ZhHansMsg.SENTRY2_COLOR_BLUE, "sentry_color_label_e.kColorBlue"],
-        [ZhHansMsg.SENTRY2_COLOR_YELLOW, "sentry_color_label_e.kColorYellow"],
+        [ZhHansMsg.SENTRY2_COLOR_BLACK, "color_label_e.kColorBlack"],
+        [ZhHansMsg.SENTRY2_COLOR_WHITE, "color_label_e.kColorWhite"],
+        [ZhHansMsg.SENTRY2_COLOR_RED, "color_label_e.kColorRed"],
+        [ZhHansMsg.SENTRY2_COLOR_GREEN, "color_label_e.kColorGreen"],
+        [ZhHansMsg.SENTRY2_COLOR_BLUE, "color_label_e.kColorBlue"],
+        [ZhHansMsg.SENTRY2_COLOR_YELLOW, "color_label_e.kColorYellow"],
     ];
 };
 export const sentry2_vision_objs = function () {
