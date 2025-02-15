@@ -755,8 +755,7 @@ class SentryBase:
 
         elif communication_port == None:
             from machine import I2C, Pin  # pylint: disable=import-error
-            communication_port = I2C(
-                scl=Pin(Pin.P19), sda=Pin(Pin.P20), freq=400000)
+            communication_port = I2C(1)
             return self.begin(communication_port)
 
         else:
