@@ -133,6 +133,18 @@ export const sentry2_vision_custom = function () {
         ],
     ];
 };
+
+export const sentry2_vision_custom1 = function () {
+    return [
+        [ZhHansMsg.SENTRY2_VISION_VISIONCOLOR, "sentry2_vision_e.kVisionColor"],
+        [ZhHansMsg.SENTRY2_VISION_VISIONBLOB, "sentry2_vision_e.kVisionBlob"],
+        [
+            ZhHansMsg.SENTRY2_VISION_VISIONCUSTOM,
+            "sentry2_vision_e.kVisionCustom",
+        ],
+    ];
+};
+
 export const sentry2_vision_param_objs = function () {
     return [
         [ZhHansMsg.SENTRY2_VISION_VISIONCOLOR, "sentry2_vision_e.kVisionColor"],
@@ -323,7 +335,7 @@ export const Sentry2VisionSetParamNum = {
                     ZhHansMsg.SENTRY2_VISION_EN,
             )
             .appendField(
-                new Blockly.FieldDropdown(sentry2_vision_custom()),
+                new Blockly.FieldDropdown(sentry2_vision_custom1()),
                 "vision_obj",
             );
         this.appendValueInput("max_num").setCheck("Number").appendField("  ");
