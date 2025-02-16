@@ -1,7 +1,8 @@
 try :
     from Sentry import Sentry as SentryBase
     from Sentry import sentry_color_label_e as color_label_e
-    from Sentry import *
+    from Sentry import sentry_class20_label_e as class20_label_e
+    from Sentry import sentry2_vision_e,sentry_camera_white_balance_e, sentry_obj_info_e,sentry_led_color_e,sentry2_card_label_e
 
     class Sentry2(SentryBase):
         SENTRY2_DEVICE_ID = 0x04
@@ -11,7 +12,7 @@ try :
 except ImportError:
     from Sentry import SentryBase
     from Sentry import LOG_ERROR,LOG_DEBUG
-    from Sentry import color_label_e,sentry_obj_info_e,sentry_led_color_e
+    from Sentry import sentry_camera_white_balance_e, color_label_e,sentry_obj_info_e,sentry_led_color_e,class20_label_e
 
     # Sentry2 vision
     class sentry2_vision_e:

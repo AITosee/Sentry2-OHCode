@@ -109,7 +109,7 @@
         }
       },
       "fields": {
-        "lable": "sentry_color_label_e.kColorRed"
+        "lable": "color_label_e.kColorRed"
       }
     },
     {
@@ -282,7 +282,7 @@
         }
       },
       "fields": {
-        "vision_card_obj": "sentry_color_label_e.kColorRed"
+        "vision_card_obj": "color_label_e.kColorRed"
       }
     },
     {
