@@ -1,7 +1,7 @@
 {
     "name": "sentry2-ohcode",
     "description": "适用于ohcode的sentry2视觉传感器库",
-    "version": "2.0.9",
+    "version": "2.0.10",
     "scripts": {
         "build:dev": "webpack --config=./webpack-config/webpack.dev.js",
         "build:prod": "webpack --config=./webpack-config/webpack.prod.js"
