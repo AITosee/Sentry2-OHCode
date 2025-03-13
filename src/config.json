@@ -1,6 +1,6 @@
 {
     "Device":"大师兄板",
     "Name":"Sentry2视觉传感器",
-    "Description":"Sentry2视觉模块",
-    "HelpUrl":""
+    "Description":"主流AI视觉模块，集成WiFi，支持模型训练与调用",
+    "HelpUrl":"https://tosee.readthedocs.io/zh/latest/Sentry2/introduction.html"
 }

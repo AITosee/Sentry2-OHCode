@@ -246,7 +246,7 @@ export const vision_obj_card_dict = function () {
 // Sentry2
 export const Sentry2Begin = {
     init: function () {
-        var mode_objs = [["I2C", "i2c0"],["UART", "uart2"]];
+        var mode_objs = [["I2C", "i2c0"]];
 
         this.appendDummyInput()
             .appendField(
