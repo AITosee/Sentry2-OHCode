@@ -467,7 +467,7 @@ export const Sentry2VisionDetectedCount = {
             )
             .appendField(ZhHansMsg.SENTRY2_DETECTED_NUMBER);
         this.setInputsInline(true);
-        this.setOutput(true, null);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
     },
 };
@@ -494,7 +494,7 @@ export const Sentry2VisionObjColor = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT);
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_VISION_RESULT_2);
         this.setInputsInline(true);
-        this.setOutput(true, Number);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_GET_VISION_VALUE);
     },
@@ -546,7 +546,7 @@ export const Sentry2GetValue = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT);
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_VISION_RESULT_2);
         this.setInputsInline(true);
-        this.setOutput(true, Number);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_GET_VISION_VALUE);
     },
@@ -575,7 +575,7 @@ export const Sentry2VisionObjLine = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT);
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_VISION_RESULT_2);
         this.setInputsInline(true);
-        this.setOutput(true, Number);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_GET_VISION_VALUE);
     },
@@ -604,7 +604,7 @@ export const Sentry2VisionObjQr = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT);
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_VISION_RESULT_2);
         this.setInputsInline(true);
-        this.setOutput(true, Number);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_GET_VISION_VALUE);
     },
@@ -624,7 +624,7 @@ export const Sentry2GetQrValue = {
             .appendField(new Blockly.FieldDropdown(_vision_objs), "vision_obj")
             .appendField(ZhHansMsg.SENTRY2_GET_QRCODEVALUE);
         this.setInputsInline(true);
-        this.setOutput(true, String);
+        this.setOutput(true, "String");
         this.setColour("#EAA20A");
     },
 };
@@ -668,7 +668,7 @@ export const Sentry2GetValueNomal = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT);
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_VISION_RESULT_2);
         this.setInputsInline(true);
-        this.setOutput(true, Number);
+        this.setOutput(true, "Number");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_GET_VISION_VALUE);
     },
@@ -700,7 +700,7 @@ export const Sentry2DetectedColor = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT_1);
         this.appendDummyInput("VisionDetected");
         this.setInputsInline(true);
-        this.setOutput(true, Boolean);
+        this.setOutput(true, "Boolean");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_DETECTED_VISION_VALUE);
     },
@@ -733,7 +733,7 @@ export const Sentry2DetectedBlob = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT_1);
         this.appendDummyInput("VisionDetected");
         this.setInputsInline(true);
-        this.setOutput(true, Boolean);
+        this.setOutput(true, "Boolean");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_DETECTED_VISION_VALUE);
     },
@@ -765,7 +765,7 @@ export const Sentry2DetectedCard = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT_1);
         this.appendDummyInput("VisionDetected");
         this.setInputsInline(true);
-        this.setOutput(true, Boolean);
+        this.setOutput(true, "Boolean");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_DETECTED_VISION_VALUE);
     },
@@ -797,7 +797,7 @@ export const Sentry2Detected20Class = {
             .appendField(ZhHansMsg.SENTRY2_VISION_RESULT_1);
         this.appendDummyInput("VisionDetected");
         this.setInputsInline(true);
-        this.setOutput(true, Boolean);
+        this.setOutput(true, "Boolean");
         this.setColour("#EAA20A");
         this.setTooltip(ZhHansMsg.SENTRY2_HELP_DETECTED_VISION_VALUE);
     },
