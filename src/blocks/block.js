@@ -231,8 +231,8 @@ export const vision_obj_card_dict = function () {
 // Sentry2
 export const Sentry2Begin = {
     init: function () {
+        // var mode_objs = [["I2C", "i2c0"],["SoftI2C", "i2csoft"]];
         var mode_objs = [["I2C", "i2c0"]];
-
         this.appendDummyInput()
             .appendField(
                 ZhHansMsg.SENTRY2_BEGIN +
@@ -242,7 +242,7 @@ export const Sentry2Begin = {
             .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj")
             .appendField(ZhHansMsg.SENTRY2_ADDR)
             .appendField(
-                new Blockly.FieldDropdown([["0x60", "0x60"]]),
+                new Blockly.FieldDropdown([["0x60", "0x60"],["0x61", "0x61"],["0x62", "0x62"],["0x63", "0x63"]]),
                 "addr_obj",
             );
         this.setInputsInline(true);
@@ -423,7 +423,7 @@ export const Sentry2SetVisionParam = {
                 new Blockly.FieldDropdown(sentry2_vision_custom()),
                 "vision_obj",
             );
-        this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_SET_PARAM + "1");
+        this.appendDummyInput().appendField("  " +ZhHansMsg.SENTRY2_SET_PARAM + "1");
         this.appendValueInput("x").setCheck("Number");
         this.appendDummyInput().appendField(ZhHansMsg.SENTRY2_SET_PARAM + "2");
         this.appendValueInput("y").setCheck("Number");

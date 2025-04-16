@@ -1,4 +1,4 @@
-__version__ = 'SentryBase v1.0.3'
+__version__ = 'SentryBase v1.0.5'
 __license__ = 'http://unlicense.org'
 
 import ustruct  # pylint: disable=import-error
@@ -916,6 +916,9 @@ class SentryBase:
             return 0
 
         vision_state = self.__vision_states[vision_type-1]
+
+        while SENTRY_OK != self.__SensorLockkReg(False):
+            pass
 
         err, frame = self.__stream.Get(kRegFrameCount)
         if err:

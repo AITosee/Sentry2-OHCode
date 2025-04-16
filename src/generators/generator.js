@@ -8,6 +8,11 @@ export const Sentry2Begin = function (block) {
             "from machine import UART";
         pythonGenerator.definitions_["init_UART"] =
             `${mode} = UART(2, baudrate=115200)`;
+
+    } else if (mode == "i2csoft") {
+        pythonGenerator.definitions_["import_IIC"] = "from machine import SoftI2C";
+        pythonGenerator.definitions_["init_IIC"] =
+            `${mode} = SoftI2C(scl=Pin(22), sda=Pin(21), freq=400000)`;
     } else {
         pythonGenerator.definitions_["import_IIC"] = "from machine import I2C";
         pythonGenerator.definitions_["init_IIC"] =
